@@ -17,13 +17,21 @@ h1, h2, section {
 }
 
 body {
-    display: flex;
-    flex-direction: column;
     height: 100vh;
     margin: 0;
     padding: 0;
     background-color: var(--bg-primary);
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prompt-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 60%;
 }
 
 .header-section {

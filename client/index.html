@@ -11,25 +11,27 @@
     <title>ChatGPT Clone</title>
 </head>
 <body>
-    <div class="header-section">
-        <h1 class="header">ChatGPT Clone</h1>
+    <div class="prompt-content">
+        <div class="header-section">
+            <h1 class="header">ChatGPT Clone</h1>
+        
+            <section class="prompt-history">
+                <div id="prompt-history" class="prompt-history"></div>
+            </section>
+        </div>
     
-        <section class="prompt-history">
-            <div id="prompt-history" class="prompt-history"></div>
-        </section>
+        <section class="prompt-section">
+            <form id="chatgpt-query" class="prompt-form">
+                <label for="prompt-form" class="prompt-form__label"></label>
+    
+                <div class="prompt-form-container">
+                    <textarea name="prompt-input" id="prompt-input" placeholder="Enter prompt..." class="prompt-form-container__textarea"></textarea>
+                    <button type="submit" id="submit-button" class="promt-form-button">
+                        <img src="up_arrow.svg" class="promt-form-button__icon"/>
+                    </button>
+                </div>
+            </form>
+        </section> 
     </div>
-
-    <section class="prompt-section">
-        <form id="chatgpt-query" class="prompt-form">
-            <label for="prompt-form" class="prompt-form__label"></label>
-
-            <div class="prompt-form-container">
-                <textarea name="prompt-input" id="prompt-input" placeholder="Enter prompt..." class="prompt-form-container__textarea"></textarea>
-                <button type="submit" id="submit-button" class="promt-form-button">
-                    <img src="up_arrow.svg" class="promt-form-button__icon"/>
-                </button>
-            </div>
-        </form>
-    </section> 
 </body>
 </html>
