@@ -11,8 +11,9 @@
     --padding-sm: 5px;
 }
 
-h1, h2 {
+h1, h2, section {
     margin: 0;
+    padding: 0;
 }
 
 body {
@@ -41,6 +42,7 @@ body {
     flex-direction: column;
     flex: 1;
     gap: 10px;
+    padding: 0 10px 10px 10px;
 }
 
 .prompt-history {

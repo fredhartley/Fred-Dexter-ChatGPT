@@ -60,6 +60,7 @@ const onRequestFaied = async (error) => {
 
 const onFormSubmit = () => {
     const userInput = promptInput.value;
+    promptInput.value = "";
     // promptHistory.replaceChildren(document.createTextNode(userInput))
 
 
@@ -80,5 +81,12 @@ queryForm.addEventListener("submit", (e) => {
     e.preventDefault();
     onFormSubmit()
 });
+
+promptInput.addEventListener("keydown", (e) => {
+    if(e.key == "Enter" && !e.shiftKey) {
+        e.preventDefault()
+        onFormSubmit()
+    }
+})
 
 
