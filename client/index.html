@@ -5,22 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script src="scripts.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <title>ChatGPT Clone</title>
 </head>
 <body>
-    <section>
-        <h1>ChatGPT Clone</h1>
-        <form id="chatgpt-query">
-            <label for="prompt"></label>
-            <textarea name="prompt-input" id="prompt-input" cols="30" rows="10" placeholder="Enter prompt..."></textarea>
-            <input type="submit" id="submit-button">
-        </form>
-
-        <section>
-            <h2>Response</h2>
-            <div id="prompt-output"></div>
+    <div class="header-section">
+        <h1 class="header">ChatGPT Clone</h1>
+    
+        <section class="prompt-history">
+            <div id="prompt-history" class="prompt-history"></div>
         </section>
-       
-    </section>
+    </div>
+
+    <section class="prompt-section">
+        <h2 class="prompt-section__header">Prompt</h2>
+        <form id="chatgpt-query" class="prompt-form">
+            <label for="prompt-form" class="prompt-form__label"></label>
+
+            <div class="prompt-form-container">
+                <textarea name="prompt-input" id="prompt-input" placeholder="Enter prompt..." class="prompt-form-container__textarea"></textarea>
+                <button type="submit" id="submit-button" class="promt-form-button">
+                    <img src="up_arrow.svg" class="promt-form-button__icon"/>
+                </button>
+            </div>
+        </form>
+    </section> 
 </body>
 </html>

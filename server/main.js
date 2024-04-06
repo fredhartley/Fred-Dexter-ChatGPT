@@ -26,7 +26,7 @@ app.post('/chatgpt-request', async (req, res) => {
 
     const json = await response.json();
 
-    res.send({ choices: json.choices });
+    res.send({ choices: json.choices, created: json.created });
 })
 
 app.listen(port, () => {
