@@ -11,7 +11,9 @@
     --padding-sm: 5px;
 }
 
-h1, h2, section {
+h1,
+h2,
+section {
     margin: 0;
     padding: 0;
 }
@@ -39,9 +41,12 @@ body {
     flex-direction: column;
     height: 100%;
     overflow: hidden;
-}   
+}
 
-.prompt-history, .prompt-section, .header-section, .prompt-form-container {
+.prompt-history,
+.prompt-section,
+.header-section,
+.prompt-form-container {
     padding: var(--padding-base);
 }
 
@@ -83,7 +88,7 @@ body {
     color: var(--gray-1);
 }
 
-.promt-form-button {
+.prompt-form-button {
     width: auto;
     padding: var(--padding-sm);
     aspect-ratio: 1/1;
@@ -94,7 +99,7 @@ body {
     border-radius: 5px;
 }
 
-.promt-form-button__icon {
+.prompt-form-button__icon {
     width: 30px;
     aspect-ratio: 1/1;
 }
