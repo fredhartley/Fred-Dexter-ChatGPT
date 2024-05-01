@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const path = require("path");
 require("dotenv").config();
 
 const app = express();
@@ -7,6 +8,7 @@ const port = 3000;
 
 app.use(cors());
 app.use(express.json());
+app.use(express.static(path.join(__dirname, "public")));
 
 app.post("/chatgpt-request", async (req, res) => {
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
@@ -16,7 +18,7 @@ app.post("/chatgpt-request", async (req, res) => {
             "Content-Type": "application/json",
         },
         body: JSON.stringify({
-            model: "gpt-3.5-turbo",
+            model: "gpt-4",
             messages: [
                 {
                     role: "user",
@@ -32,5 +34,5 @@ app.post("/chatgpt-request", async (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`);
+    console.log(`ChatGPT Clone app listening on port ${port}`);
 });
