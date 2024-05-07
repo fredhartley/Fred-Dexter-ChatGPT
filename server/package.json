@@ -1,9 +1,10 @@
 {
     "name": "server",
     "version": "0.1.0",
-    "main": "main.js",
+    "main": "index.js",
     "scripts": {
-        "dev": "nodemon main.js"
+        "dev": "nodemon index.js",
+        "build": ""
     },
     "dependencies": {
         "cors": "^2.8.5",
