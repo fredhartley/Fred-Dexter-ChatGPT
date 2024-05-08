@@ -32,7 +32,7 @@ const onFormSubmit = () => {
     container.appendChild(displayUserInput(userInput));
     promptHistory.appendChild(container);
 
-    fetch("https://fred-dexter-chat-gpt.vercel.app/chatgpt-request", {
+    fetch("http://127.0.0.1:3000/chatgpt-request", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: userInput }),

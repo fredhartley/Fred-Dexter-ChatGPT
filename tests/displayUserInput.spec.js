@@ -1,7 +1,7 @@
 const { test, expect } = require("@playwright/test");
 
 test("testing form input and output", async ({ page }) => {
-    await page.goto("http://127.0.0.1:5500/client/index.html");
+    await page.goto("http://127.0.0.1:3000/");
 
     const userInput = "This is test text.";
 
