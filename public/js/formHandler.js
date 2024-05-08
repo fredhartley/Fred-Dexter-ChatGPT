@@ -6,6 +6,7 @@ const promptInput = document.getElementById("prompt-input");
 const promptHistory = document.getElementById("prompt-history");
 
 const onRequestComplete = async (req, container) => {
+    console.log(req);
     const json = await req.json();
     const choices = json.choices;
     const timestamp = json.created;
@@ -32,7 +33,7 @@ const onFormSubmit = () => {
     container.appendChild(displayUserInput(userInput));
     promptHistory.appendChild(container);
 
-    fetch("http://127.0.0.1:3000/chatgpt-request", {
+    fetch("/chatgpt-request", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: userInput }),
