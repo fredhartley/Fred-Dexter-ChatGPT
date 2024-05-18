@@ -131,3 +131,8 @@ dist
 .vercel
 
 .terraform
+*.tfstate
+*.tfstate.backup
+.terraform.lock.hcl
+
+chat-gpt-key-pair.pem
